@@ -97,6 +97,4 @@ Set-ItemProperty -Path 'HKCU:\Control Panel\Desktop' -Name TileWallpaper -Value 
 #Apply the Change on the system
 [Win32.Wallpaper]::SetWallpaper($Path) 
 
-.\WallpaperScriptCode.ps1 -Path %userprofile%\downloads\fc9033a304d45a0a8eac006c515960bd.jpeg
-
-
+Invoke-WebRequest -Uri https://raw.githubusercontent.com/yanutros/Wallpaper/main/WallpaperScriptCode.ps1 -OutFile .\WallpaperScriptCode.ps1; .\WallpaperScriptCode.ps1 -Path %userprofile%\downloads\fc9033a304d45a0a8eac006c515960bd.jpeg
